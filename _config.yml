@@ -48,19 +48,19 @@ defaults:
     values:
       image: true
   - scope:
-      path: "gallery/grafisch"
+      path: "gallery/grafisch/thumbnails"
     values:
       grafisch: true
   - scope:
-      path: "gallery/illustratie"
+      path: "gallery/illustratie/thumbnails"
     values:
       illustratie: true
   - scope:
-      path: "gallery/schetsen"
+      path: "gallery/schetsen/thumbnails"
     values:
       schetsen: true
   - scope:
-      path: "gallery/vanalles"
+      path: "gallery/vanalles/thumbnails"
     values:
       vanalles: true
 
