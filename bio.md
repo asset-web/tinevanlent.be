@@ -23,7 +23,7 @@ permalink: /bio/
 	<tr>
 		<th>Website
 		</th>
-		<td><a href="http://tinevanlent.be" title="Tine Van lent's website">http://tinevanlent.be</a>
+		<td><a href="https://tinevanlent.be" title="Tine Van lent's website">https://tinevanlent.be</a>
 		</td>
 	</tr>
 	<tr>
