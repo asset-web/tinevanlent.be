@@ -18,7 +18,7 @@ email: email@tinevanlent.be
 description: >- # this means to ignore newlines until "baseurl:"
   Tine Van lent - graphic designer, artist, face painter, and illustrator of Prinses zoekt prins & Papa is weg.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tinevanlent.be" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: assetweb
 github_username:  assetweb
 facebook_username: tine.vanlent
@@ -41,6 +41,28 @@ timezone: Europe/Brussels
 lang: nl
 
 google_analytics: UA-4418195-26
+
+defaults:
+  - scope:
+      path: "gallery"
+    values:
+      image: true
+  - scope:
+      path: "gallery/grafisch"
+    values:
+      section: "grafisch"
+  - scope:
+      path: "gallery/illustratie"
+    values:
+      section: "illustratie"
+  - scope:
+      path: "gallery/schetsen"
+    values:
+      section: "schetsen"
+  - scope:
+      path: "gallery/vanalles"
+    values:
+      section: "vanalles"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
