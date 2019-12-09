@@ -33,8 +33,10 @@
 
 		jekyll new .
 
- * Build and serve site
+ * Serve develpoment site
 
 		bundle exec jekyll serve
 
-See for building production env https://jekyllrb.com/docs/configuration/environments/
+ * Build production site
+
+		JEKYLL_ENV=production jekyll build
