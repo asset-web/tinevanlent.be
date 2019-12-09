@@ -50,19 +50,19 @@ defaults:
   - scope:
       path: "gallery/grafisch"
     values:
-      section: "grafisch"
+      grafisch: true
   - scope:
       path: "gallery/illustratie"
     values:
-      section: "illustratie"
+      illustratie: true
   - scope:
       path: "gallery/schetsen"
     values:
-      section: "schetsen"
+      schetsen: true
   - scope:
       path: "gallery/vanalles"
     values:
-      section: "vanalles"
+      vanalles: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
