@@ -1,3 +1,4 @@
+
 # Tine Van lent's website - tinevanlent.be
 
 ## Development
@@ -31,3 +32,9 @@
  * Create new site with default theme
 
 		jekyll new .
+
+ * Build and serve site
+
+		bundle exec jekyll serve
+
+See for building production env https://jekyllrb.com/docs/configuration/environments/
