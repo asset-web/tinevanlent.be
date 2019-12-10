@@ -40,3 +40,8 @@
  * Build production site
 
 		JEKYLL_ENV=production jekyll build
+
+ * Example deployment
+
+		cd _site
+		rsync -r . username@host:/webroot/
