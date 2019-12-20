@@ -33,7 +33,7 @@
 
 		jekyll new .
 
- * Serve develpoment site
+ * Serve developement site
 
 		bundle exec jekyll serve
 
