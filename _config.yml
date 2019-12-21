@@ -19,9 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Tine Van lent - graphic designer, artist, face painter, and illustrator of Prinses zoekt prins & Papa is weg.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tinevanlent.be" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: assetweb
-github_username:  assetweb
 facebook_username: tine.vanlent
+instagram_username: tinevanlent
 
 # Build settings
 markdown: kramdown
