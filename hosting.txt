@@ -1,0 +1,5 @@
+---
+path: /hosting.txt
+
+---
+Jekyll site last build on {{ site.time | date_to_rfc822 }}
