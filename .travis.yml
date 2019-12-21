@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+- 2.5.1
+before_install:
+- gem --version
+- gem update --system 3.0.6
+- gem --version
+- bundler -v
+- gem install bundler -v 2.0.2
+- bundler -v
+script: JEKYLL_ENV=production bundle exec jekyll build
+after_success:
+- openssl aes-256-cbc -K $encrypted_2a7123d3ade4_key -iv $encrypted_2a7123d3ade4_iv
+  -in private_key.enc -out private_key -d
+- cd _site
+- rsync -r . -e "ssh -i /tmp/private_key" REMOTE_LOCATON
+env:
+  global:
+    secure: EPnsOX8YVUSu8nbOUk7PH87IosXo+FPTyDAuRGhukDfLh25bNZ0Vr+tHtyLXQ8LDrz6qLAeUGllfUHpPouo+qBJE4VaLDj3iBmCufzbD/+vZV4fIneh0qB/2up8mc+/HRuNOcxF7HzXttKfh7PjyvkWUMbHokbaRLK5ypI58p69zISnwPA5ogIFD+GJuIvk5YeTgu+tdDi9DWWOQaY6vIa8cNzhmizET2sDLozCPYmDyS55Emm+gBu7AzOEV3ILsa4L2DZaxGhf55ptXUWNzLd2En1Rd690tQ154C9hqhqtwvNz2SL2Ib4I995zrORXFPkJb+fZP0byErUV8X1eNAhfH0dIKCvMTKNTUCRJr4GPxnPR4tDL7CtNRgaVYAvi3etWfrELkMyRNmcqMbdENHLnbv3SITTeqQbhR55Q7vjxkzz/6EY3OEmKA1ub7FKDw7gfLmgkYhdoZveWXdLavAYWWLFWxSOA2Nw99xuUtw13BeXf7jpFF+ZEIDhF8fUclmhdQu1ZIHKFfOykPCVTODHM60msg0t67oSazBAqpbKun2fIJ+E5lGeISkHK+8kLKTjaFjliBgBPObYjXADnMb/t3eNm+eS05HoWabHdAqhIT5DjgiRL6zavLP9jrwE0tNEl2/xerWNSXq3uPmMwqOiqatYu0ekNhZfUyxOXiai8=
