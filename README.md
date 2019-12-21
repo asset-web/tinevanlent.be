@@ -1,5 +1,6 @@
+# Tine Van lent's website - [tinevanlent.be](https://tinevanlent.be)
 
-# Tine Van lent's website - tinevanlent.be
+[![Build Status](https://travis-ci.org/asset-web/tinevanlent.be.svg?branch=master)](https://travis-ci.org/asset-web/tinevanlent.be)
 
 ## Development
 
@@ -45,3 +46,7 @@
 
 		cd _site
 		rsync -r . username@host:/webroot/
+
+## CI/CD
+
+Gitflow workflow in use.  Travis CI used to build, test and deploy static Jekyll site to remote server.
