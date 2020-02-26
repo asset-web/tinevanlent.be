@@ -75,3 +75,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - private_key
+  - script/
