@@ -2,4 +2,4 @@
 path: /hosting.txt
 
 ---
-Jekyll site last build on {{ site.time | date_to_rfc822 }}
+Jekyll site last built on {{ site.time | date_to_rfc822 }}
