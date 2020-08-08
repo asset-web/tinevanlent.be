@@ -23,10 +23,21 @@
 		gem install jekyll --version 3.8.5
 		gem install bundler
 
-1. Set up development site
 
-		git clone git@github.com:asset-web/tinevanlent.be.git
-		cd tinevanlent.be/
+### OS X set up
+
+Prerequisite homebrew is installed
+
+	brew install ruby
+	echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+	gem install --user-install bundler jekyll
+	echo 'export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"' >> ~/.bash_profile
+
+
+### Set up development site
+
+	git clone git@github.com:asset-web/tinevanlent.be.git
+	cd tinevanlent.be/
 
 ### Example Jekyll commands
 
@@ -46,6 +57,7 @@
 
 		cd _site
 		rsync -r . username@host:/webroot/
+
 
 ## CI/CD
 
