@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/asset-web/tinevanlent.be.svg?branch=master)](https://travis-ci.org/asset-web/tinevanlent.be)
 
-[![Requirements Status](https://requires.io/github/asset-web/tinevanlent.be/requirements.svg?branch=master)](https://requires.io/github/asset-web/tinevanlent.be/requirements/?branch=master)
-
 ## Development
 
 ### Linux set up
