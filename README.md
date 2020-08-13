@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/asset-web/tinevanlent.be.svg?branch=master)](https://travis-ci.org/asset-web/tinevanlent.be)
 
+[![Requirements Status](https://requires.io/github/asset-web/tinevanlent.be/requirements.svg?branch=master)](https://requires.io/github/asset-web/tinevanlent.be/requirements/?branch=master)
+
 ## Development
 
 ### Linux set up
@@ -45,7 +47,7 @@ Prerequisite homebrew is installed
 
 		jekyll new .
 
- * Serve developement site
+ * Serve development site
 
 		bundle exec jekyll serve
 
@@ -58,6 +60,10 @@ Prerequisite homebrew is installed
 		cd _site
 		rsync -r . username@host:/webroot/
 
+ * Update dependencies, specific or all gems.
+
+ 		bundle update jekyll
+ 		bundle update
 
 ## CI/CD
 
