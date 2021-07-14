@@ -1,6 +1,6 @@
 # Tine Van lent's website - [tinevanlent.be](https://tinevanlent.be)
 
-[![Build Status](https://travis-ci.org/asset-web/tinevanlent.be.svg?branch=master)](https://travis-ci.org/asset-web/tinevanlent.be)
+[![Build Status](https://travis-ci.com/asset-web/tinevanlent.be.svg?branch=master)](https://travis-ci.org/asset-web/tinevanlent.be)
 
 ## Development
 
