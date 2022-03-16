@@ -53,11 +53,6 @@ Prerequisite homebrew is installed
 
 		JEKYLL_ENV=production jekyll build
 
- * Example deployment
-
-		cd _site
-		rsync -r . username@host:/webroot/
-
  * Update dependencies, specific or all gems.
 
  		bundle update jekyll
@@ -65,4 +60,4 @@ Prerequisite homebrew is installed
 
 ## CI/CD
 
-Gitflow workflow in use.  Travis CI used to build, test and deploy static Jekyll site to remote server.
+Gitflow workflow in use.  Travis CI used to build and test.  Deploy static Jekyll site to remote server is managed using Digital Ocean integration.
