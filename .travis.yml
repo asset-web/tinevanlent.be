@@ -1,24 +1,8 @@
 language: ruby
 rvm:
-- 2.5.1
+- 2.7.3
 before_install:
-- gem update --system 3.0.6
-- gem install bundler -v 2.0.2
+- gem install bundler -v 2.3.9
 script: "./script/cibuild"
-after_success:
-- openssl aes-256-cbc -K $encrypted_2a7123d3ade4_key -iv $encrypted_2a7123d3ade4_iv
-  -in private_key.enc -out private_key -d
-- chmod go-rwx private_key
-- rsync --delete-after -v -r -e "ssh -i private_key" _site/ $REMOTE_USER@tinevanlent.be:$REMOTE_PATH
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - secure: RGZlXcYz3sreziRTEwOXnwH21Zu9LzLQV/to5aAsRQCOnrFrDVDlfJkDBRg53hg6YotR+8SwCrhW1t9uxMfULeKdmHNxrMfzAeOi3wxIP6HA5YfuMujHao871g9zOG9tjqNiUhZrQbGFO/mF8K/dc0s4TLcfjA2p9BHfaZj1r2a4SYCcavZN5sydk2ZTptCZxcDprOqekYg4702JUcvNrOx5g2HLbx8ntwMWqYbuXz2wKCzans6HjHNfNZZStQ6rq0lbp2+t8eixiN293T/7UWNf3bciGx/o3pH4AwEKktRCTPLJY+Xh3E0v0Hu7K/t42NVbSkefONtAEogjyXqGZuDiiPl7ZUU4z2MtTLA0S0JSSEeUNtWCxLW8xvYJ4NvGtU/FLvNXzPazQkJ5MoOwE0W5jEMiUx0H8Snu3ikP9/qU2XkDlMy0ZcC6/fKgIOAhqvz6CSkLSV9eskfmsPkL0g/YluvWJESKOMFMMYosqRlUjp788OXh7qQPLGHfBXGSXn6TQedtZGS4m0w/yHd7rpdF78sLDODTXj2CUD+kcObghLFK3mylitVKLE2y9N2nccibpfdcELq0/UOFwrH8J0BaQJjJh08IxcRKHNE+IV66ES13cvEo3tXrW/3CEbu3Fr33wCQon/eJsfWw59/CVFo1j1xVQ7t4hMvaZwV1ecE=
-  - secure: pht4HS4RJ49KqokaDpaTrxnu2CBoz40KkfBR7qxZts5OVX9dkNqSUJq9XERGow3kW14Ez7EE/4g2TXBh8j1EZfpMaMiMvJPTd2AMjMEBTXCcufmFP31WTkGg7SPmdGV7DJXEsxfkye5v0ExcAYA+KSNDEOf0Ai2YR5RF2EUxUaYhd8bzvw6O6OUXW9Q44/EsRJ77uuLjFosCccbs8IYs1wfNjrXjcesOUgIFFYswn5mfUmXnz6owRtFC10llcxUtt0LlNd4H+eRnAOclh7Ky7wGqDH4/8AAZwFPSlsxNo4/lC3GBU7ijQUMV6tUuiVg5yO2fJ97jTOJLHm9uBv++MT1CVYyayP/prK8pzboUZvoRRAvJ6iakQNjwCn+Q+Z44vcosoabNIsEMq5AzNkAQEwCphyuK7oDtG2TuNsXPHGBtvB4PLe13kMlDMl3I76DiyYOgyzM2yI/23eW7iHtfTTCeuuFdDkdDsHu85arspygNfsjFZyWZ2PnKCarI4cHqkPLXVU8nn7aP622AoxvOiy4UXsXnUCCAt54NizpOdMvsE+6JqadsdjjiPd9mQIQ0++9He8vCixBT8/hIVCRXpAtzY3VvZgG0mnTlniRkFRkWt2cTP8M9i2cBBl58imyWyweU2RHHc5r7k+5RFNIOYuy+atBZfjybUoQ4EM5q+Ro=
-addons:
-  ssh_known_hosts: tinevanlent.be
-  apt:
-    packages:
-    - libcurl4-openssl-dev
 cache: bundler
 sudo: false
