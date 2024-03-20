@@ -24,7 +24,7 @@
 		gem install bundler
 
 
-### OS X set up
+### Bare OS X set up
 
 Prerequisite homebrew is installed
 
@@ -57,6 +57,16 @@ Prerequisite homebrew is installed
 
  		bundle update jekyll
  		bundle update
+
+### Docker set up
+
+Build static site and run tests locally
+
+```
+docker build . -t tvl-web
+docker run --rm tvl-web
+```
+
 
 ## CI/CD
 
