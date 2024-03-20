@@ -11,4 +11,4 @@ RUN bundle install
 
 COPY . /src
 
-CMD ["bash", "/src/script/cibuild.sh"]
+CMD ["bash", "/src/scripts/cibuild.sh"]
