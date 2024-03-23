@@ -1,6 +1,6 @@
 # Tine Van lent's website - [tinevanlent.be](https://tinevanlent.be)
 
-[![Build Status](https://travis-ci.com/asset-web/tinevanlent.be.svg?branch=master)](https://travis-ci.org/asset-web/tinevanlent.be)
+[![Build and test static site](https://github.com/asset-web/tinevanlent.be/actions/workflows/docker.yml/badge.svg)](https://github.com/asset-web/tinevanlent.be/actions/workflows/docker.yml)
 
 ## Development
 
