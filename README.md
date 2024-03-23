@@ -67,6 +67,20 @@ docker build . -t tvl-web
 docker run --rm tvl-web
 ```
 
+#### Update jekll
+```
+docker compose up -d
+docker compose exec web bundle update jekyll
+```
+
+
+#### Run development jekll server
+Run the below command and then visit: http://localhost:4000
+
+```
+docker compose up -d
+```
+
 
 ## CI/CD
 

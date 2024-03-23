@@ -1,5 +1,12 @@
 # CHANGE LOG
 
+## [1.4.0] 2024-03-23
+
+### Changed
+- Update ruby
+- Update bundlre
+- Update Jekyll
+
 ## [1.3.0] 2024-03-20
 
 ### Added
