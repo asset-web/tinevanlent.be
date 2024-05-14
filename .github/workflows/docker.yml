@@ -36,22 +36,14 @@ jobs:
       - name: Test
         run: |
           docker run --rm ${{ env.TEST_TAG }}
-      - name: Build and push commit hash tagged image
-        uses: docker/build-push-action@v5
+      - name: Push Docker images if on master branch
         if: ${{ startsWith(github.ref, 'refs/heads/master') }}
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ${{ env.COMMIT_TAG }}
-      - name: Build and push latest tagged image
-        uses: docker/build-push-action@v5
-        if: ${{ startsWith(github.ref, 'refs/heads/master') }}
-        with:
-            context: .
-            platforms: linux/amd64,linux/arm64
-            push: true
-            tags: ${{ env.LATEST_TAG }}
+        run: |
+          docker ps --all
+          docker tag ${{ env.TEST_TAG }} ${{ env.COMMIT_TAG }}
+          docker tag ${{ env.TEST_TAG }} ${{ env.LATEST_TAG }}
+          docker push ${{ env.COMMIT_TAG }}
+          docker push  ${{ env.LATEST_TAG }}
       - name: Archive static files
         uses: actions/upload-artifact@v4
         if: ${{ startsWith(github.ref, 'refs/heads/master') }}
