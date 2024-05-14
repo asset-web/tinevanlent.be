@@ -10,7 +10,7 @@ on:
 env:
   TEST_TAG: assetweb/tvl-jekyll:test
   LATEST_TAG: assetweb/tvl-jekyll:latest
-  COMMIT_TAG: assetweb/tvl-jekyll:${{ github.ref }}
+  COMMIT_TAG: assetweb/tvl-jekyll:${{ github.sha }}
 
 jobs:
   build:
