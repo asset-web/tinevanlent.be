@@ -10,6 +10,7 @@ on:
 env:
   TEST_TAG: assetweb/tvl-jekyll:test
   LATEST_TAG: assetweb/tvl-jekyll:latest
+  COMMIT_TAG: assetweb/tvl-jekyll:${{ github.ref }}
 
 jobs:
   build:
@@ -35,17 +36,25 @@ jobs:
       - name: Test
         run: |
           docker run --rm ${{ env.TEST_TAG }}
-      - name: Build and push
+      - name: Build and push commit hash tagged image
         uses: docker/build-push-action@v5
-        if: ${{ ! startsWith(github.ref, 'refs/heads/master') }}
+        if: ${{ startsWith(github.ref, 'refs/heads/master') }}
         with:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.LATEST_TAG }}
+          tags: ${{ env.COMMIT_TAG }}
+      - name: Build and push latest tagged image
+        uses: docker/build-push-action@v5
+        if: ${{ startsWith(github.ref, 'refs/heads/master') }}
+        with:
+            context: .
+            platforms: linux/amd64,linux/arm64
+            push: true
+            tags: ${{ env.LATEST_TAG }}
       - name: Archive static files
         uses: actions/upload-artifact@v4
-        if: ${{ ! startsWith(github.ref, 'refs/heads/master') }}
+        if: ${{ startsWith(github.ref, 'refs/heads/master') }}
         with:
           name: jekyll-static-output
           path: _site
