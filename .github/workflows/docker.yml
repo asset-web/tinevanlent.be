@@ -35,7 +35,8 @@ jobs:
           tags: ${{ env.TEST_TAG }}
       - name: Test
         run: |
-          docker run --rm ${{ env.TEST_TAG }}
+          docker run -v ".:/src" --rm ${{ env.TEST_TAG }}
+          ls -l _site
       - name: Push Docker images if on master branch
         if: ${{ startsWith(github.ref, 'refs/heads/master') }}
         run: |
