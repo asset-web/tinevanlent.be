@@ -6,7 +6,7 @@ RUN mkdir -p /src
 COPY ./Gemfile /src
 COPY ./Gemfile.lock /src
 WORKDIR /src
-RUN gem install bundler:2.6.5
+RUN gem install bundler:2.7.1
 RUN bundle install
 
 COPY . /src
