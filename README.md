@@ -77,9 +77,10 @@ docker compose exec web bundle update jekyll
 
 #### Update all packages or change Ruby/Bundler versions
 ```bash
-rm Gemfile.lock
 # Disable copying lock file 
 docker compose build web
+docker compose up -d
+rm Gemfile.lock
 docker compose exec web bundle update --all
 ```
 
