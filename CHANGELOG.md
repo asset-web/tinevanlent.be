@@ -1,5 +1,13 @@
 # CHANGE LOG
 
+## [1.5.0] 2026-02-24
+
+### Changed
+- Update third party dependencies.
+
+### Security
+- Update nokogiri.
+
 ## [1.4.0] 2024-03-23
 
 ### Changed
