@@ -46,7 +46,7 @@ jobs:
           docker push ${{ env.COMMIT_TAG }}
           docker push  ${{ env.LATEST_TAG }}
       - name: Archive static files
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: ${{ startsWith(github.ref, 'refs/heads/master') }}
         with:
           name: jekyll-static-output
