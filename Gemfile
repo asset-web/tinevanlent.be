@@ -33,4 +33,4 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "html-proofer"
 
 # Fixed to resolve a build issue
-gem "async", "2.35.0"
+gem "async", "2.36.0"
