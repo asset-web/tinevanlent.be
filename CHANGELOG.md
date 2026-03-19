@@ -3,6 +3,8 @@
 ## [1.6.0] 2026-03-19
 
 ### Changed
+- Update ruby
+- Update bundler
 - Update third party dependencies
 
 ### Security
@@ -20,7 +22,7 @@
 
 ### Changed
 - Update ruby
-- Update bundlre
+- Update bundler
 - Update Jekyll
 
 ## [1.3.0] 2024-03-20
