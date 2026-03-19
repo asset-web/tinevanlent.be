@@ -16,7 +16,7 @@
 - Update third party dependencies
 
 ### Security
-- Update nokogiri.
+- Update nokogiri
 
 ## [1.4.0] 2024-03-23
 
