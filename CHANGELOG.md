@@ -1,5 +1,13 @@
 # CHANGE LOG
 
+## [1.7.0] 2026-04-16
+
+### Changed
+- Update third party dependencies
+
+### Security
+- Update addressable
+
 ## [1.6.0] 2026-03-19
 
 ### Changed
