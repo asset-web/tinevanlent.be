@@ -71,7 +71,7 @@ docker run --rm tvl-web
 ```bash
 docker compose up -d
 # Update single gem
-docker compose exec web bundle update jekyll
+docker compose run --rm web bundle update jekyll
 ```
 
 
@@ -81,7 +81,7 @@ docker compose exec web bundle update jekyll
 docker compose build web
 docker compose up -d
 rm Gemfile.lock
-docker compose exec web bundle update --all
+docker compose run --rm web bundle update --all
 ```
 
 #### Run development jekll server
