@@ -79,7 +79,6 @@ docker compose run --rm web bundle update jekyll
 ```bash
 # Disable copying lock file 
 docker compose build web
-docker compose up -d
 rm Gemfile.lock
 docker compose run --rm web bundle update --all
 ```
