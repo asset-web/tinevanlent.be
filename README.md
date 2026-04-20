@@ -69,18 +69,22 @@ docker run --rm tvl-web
 
 #### Update jekll
 ```bash
-docker compose up -d
 # Update single gem
 docker compose run --rm web bundle update jekyll
 ```
 
-
-#### Update all packages or change Ruby/Bundler versions
-```bash
-# Disable copying lock file 
-docker compose build web
-rm Gemfile.lock
+#### Update all packages
 docker compose run --rm web bundle update --all
+
+#### Change Ruby/Bundler versions
+```bash
+# Disable copying lock file and installing gems in Docker file
+rm Gemfile.lock
+docker compose build web
+docker compose run --rm web bundle update --all
+# Re-enable copying lock file in Docker file
+docker compose build web
+docker compose run --rm web bash /src/scripts/cibuild.sh
 ```
 
 #### Run development jekll server
