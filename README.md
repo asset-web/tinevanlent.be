@@ -77,8 +77,14 @@ docker compose run --rm web bundle update jekyll
 ```
 
 #### Update all packages
+docker compose run --rm web bundle update --all
+
+#### Change bundler versions
 ```bash
-docker compose run --rm web bundle update
+docker compose run --rm web bundle _2.7.2_ install
+docker compose run --rm web bundle update --all
+docker compose build web
+docker compose run --rm web bash /src/scripts/cibuild.sh
 ```
 
 #### Run development jekll server
@@ -87,7 +93,6 @@ Run the below command and then visit: http://localhost:4000
 ```bash
 docker compose up -d
 ```
-
 
 ## CI/CD
 
