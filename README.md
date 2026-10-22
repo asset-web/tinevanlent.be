@@ -63,26 +63,26 @@ Prerequisite homebrew is installed
 Build static site and run tests locally
 
 ```bash
-docker build . -t tvl-web
-docker run --rm tvl-web
+docker build . -t tvl-web && docker run --rm tvl-web
+```
+
+# Update bundler to a specific version
+```bash
+docker compose run --rm web bundle _2.7.2_ install
 ```
 
 #### Update jekll
 ```bash
-# Update single gem
 docker compose run --rm web bundle update jekyll
 ```
 
 #### Update all packages
 docker compose run --rm web bundle update --all
 
-#### Change Ruby/Bundler versions
+#### Change bundler versions
 ```bash
-# Disable copying lock file and installing gems in Docker file
-rm Gemfile.lock
-docker compose build web
+docker compose run --rm web bundle _2.7.2_ install
 docker compose run --rm web bundle update --all
-# Re-enable copying lock file in Docker file
 docker compose build web
 docker compose run --rm web bash /src/scripts/cibuild.sh
 ```
