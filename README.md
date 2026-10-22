@@ -62,22 +62,29 @@ Prerequisite homebrew is installed
 
 Build static site and run tests locally
 
+```bash
+docker build . -t tvl-web && docker run --rm tvl-web
 ```
-docker build . -t tvl-web
-docker run --rm tvl-web
+
+# Update bundler to a specific version
+```bash
+docker compose run --rm web bundle _2.7.2_ install
 ```
 
 #### Update jekll
-```
-docker compose up -d
-docker compose exec web bundle update jekyll
+```bash
+docker compose run --rm web bundle update jekyll
 ```
 
+#### Update all packages
+```bash
+docker compose run --rm web bundle update
+```
 
 #### Run development jekll server
 Run the below command and then visit: http://localhost:4000
 
-```
+```bash
 docker compose up -d
 ```
 
