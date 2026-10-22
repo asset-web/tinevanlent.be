@@ -136,7 +136,8 @@ DEPENDENCIES
   jekyll-feed
   jekyll-seo-tag
   minima
+  rake
   tzinfo-data
 
 BUNDLED WITH
-   2.6.5
+   2.7.2
