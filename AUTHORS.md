@@ -1,3 +1,5 @@
-Website developed by 
+# Authors
 
-	Tessa Alexander, <https://github.com/asset-web>
+## Contributors
+
+* *Tessa Alexander-Holmes* - Developer <https://github.com/asset-web>

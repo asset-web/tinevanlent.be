@@ -8,92 +8,99 @@
 
 1. Install Ruby
 
-		sudo apt-get install ruby-full build-essential zlib1g-dev
+        sudo apt-get install ruby-full build-essential zlib1g-dev
 
 1. Configure Gem location
 
-		echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-		echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-		echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-		source ~/.bashrc
+        echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+        echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+        echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+        source ~/.bashrc
 
 1. Install Jekyll & Bundler
 
-		# Check version requirements here https://pages.github.com/versions/
-		gem install jekyll --version 3.8.5
-		gem install bundler
-
+        # Check version requirements here https://pages.github.com/versions/
+        gem install jekyll --version 3.8.5
+        gem install bundler
 
 ### Bare OS X set up
 
 Prerequisite homebrew is installed
 
-	brew install ruby
-	echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
-	gem install --user-install bundler jekyll
-	echo 'export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"' >> ~/.bash_profile
-
+    brew install ruby
+    echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+    gem install --user-install bundler jekyll
+    echo 'export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"' >> ~/.bash_profile
 
 ### Set up development site
 
-	git clone git@github.com:asset-web/tinevanlent.be.git
-	cd tinevanlent.be/
+    git clone git@github.com:asset-web/tinevanlent.be.git
+    cd tinevanlent.be/
 
 ### Example Jekyll commands
 
- * Create new site with default theme
+* Create new site with default theme
 
-		jekyll new .
+        jekyll new .
 
- * Serve development site
+* Serve development site
 
-		bundle exec jekyll serve
+        bundle exec jekyll serve
 
- * Build production site
+* Build production site
 
-		JEKYLL_ENV=production jekyll build
+        JEKYLL_ENV=production jekyll build
 
- * Update dependencies, specific or all gems.
+* Update dependencies, specific or all gems.
 
- 		bundle update jekyll
- 		bundle update
+         bundle update jekyll
+         bundle update
 
 ### Docker set up
 
-Build static site and run tests locally
+#### Build static site and run tests locally
 
-```bash
-docker build . -t tvl-web && docker run --rm tvl-web
-```
+    ```bash
+    docker build . -t tvl-web && docker run --rm tvl-web
+    # or
+    docker compose run --rm --entrypoint="" web /src/scripts/cibuild.sh
+    ```
 
-# Update bundler to a specific version
-```bash
-docker compose run --rm web bundle _2.7.2_ install
-```
+#### Update bundler to a specific version
+
+    ```bash
+    docker compose run --rm web bundle _2.7.2_ install
+    ```
 
 #### Update jekll
-```bash
-docker compose run --rm web bundle update jekyll
-```
+
+    ```bash
+    docker compose run --rm web bundle update jekyll
+    ```
 
 #### Update all packages
-docker compose run --rm web bundle update --all
+
+    ```bash
+    docker compose run --rm web bundle update --all
+    ```
 
 #### Change bundler versions
-```bash
-docker compose run --rm web bundle _2.7.2_ install
-docker compose run --rm web bundle update --all
-docker compose build web
-docker compose run --rm web bash /src/scripts/cibuild.sh
-```
+
+    ```bash
+    docker compose run --rm web bundle _2.7.2_ install
+    docker compose run --rm web bundle update --all
+    docker compose build web
+    docker compose run --rm web bash /src/scripts/cibuild.sh
+    ```
 
 #### Run development jekll server
-Run the below command and then visit: http://localhost:4000
 
-```bash
-docker compose up -d
-```
+Run the below command and then visit: [http://localhost:4000]
+
+    ```bash
+    docker compose up -d
+    ```
 
 ## CI/CD
 
-Gitflow workflow in use.  Travis CI used to build and test.  Deploy static Jekyll site to remote server is managed using Digital Ocean integration.
+Gitflow workflow in use.  Previously Travis CI used to build and test.  Deploy static Jekyll site to remote server is managed using Digital Ocean integration.
