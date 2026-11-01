@@ -87,7 +87,7 @@ Prerequisite homebrew is installed
 #### Change bundler versions
 
     ```bash
-    docker compose run --rm web bundle _2.7.2_ install
+    docker compose run --rm web bundle _4.0.10_ install
     docker compose run --rm web bundle update --all
     docker compose build web
     docker compose run --rm web bash /src/scripts/cibuild.sh

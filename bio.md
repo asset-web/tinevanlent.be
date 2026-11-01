@@ -113,8 +113,8 @@ Selectie voor de Beaufortprijs en deelname aan de tentoonstelling in Anderlecht 
 
 Arteshock Klein-Brabantse atelierroute. Zomer 2003
 
-Hof Van Coolhem<br />
-Genomineerd voor Cultuurprijs 2005 Lions Club Klein-Brabant<br />
+Hof Van Coolhem<br>
+Genomineerd voor Cultuurprijs 2005 Lions Club Klein-Brabant<br>
 mei 2005
 
 Arteshock Klein-Brabantse atelierroute. Zomer 2005
@@ -125,15 +125,15 @@ Leidster Chiro Bornem 1997-2000
 
 Attest Animator in het Jeugdwerk Crefi 1997
 
-Muziekschool Bornem<br />
+Muziekschool Bornem<br>
 Dwarsfluit, A.M.V., Algemene Muziekcultuur en samenspel 1998
 
-Academie en Vaktekenschool Temse <br />
+Academie en Vaktekenschool Temse <br>
 Filiaal Bornem
 Middelbare graad 1992-1998
 
-Kindergrime, ballonplooien en henna-tattoos<br />
-Op kinderfeestjes, evenementen,&hellip;<br />
+Kindergrime, ballonplooien en henna-tattoos<br>
+Op kinderfeestjes, evenementen,&hellip;<br>
 (cursus kindergime Crefi 1998)
 
 Hoofdanimator op het Speelplein van Sint-Amands Augustus 2003
