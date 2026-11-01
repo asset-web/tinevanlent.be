@@ -102,6 +102,12 @@ and then update the Gemfile dependnecies.
 docker compose run --rm --build web bundle update
 ```
 
+### Add check sums and normalise
+
+```bash
+docker compose run --rm web bundle lock --normalize-platforms --add-checksums
+```
+
 #### Run development jekll server
 
 Run the below command and then visit: [http://localhost:4000]
