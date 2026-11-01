@@ -98,15 +98,15 @@ Prerequisite homebrew is installed
 Update dockerfile and Gemfile.  Run the below to rebuild local Docker image
 and then update the Gemfile dependnecies.
 
-```bash
-docker compose run --rm --build web bundle update
-```
+    ```bash
+    docker compose run --rm --build web bundle update
+    ```
 
 ### Add check sums and normalise
 
-```bash
-docker compose run --rm web bundle lock --normalize-platforms --add-checksums
-```
+    ```bash
+    docker compose run --rm web bundle lock --normalize-platforms --add-checksums
+    ```
 
 #### Run development jekll server
 
