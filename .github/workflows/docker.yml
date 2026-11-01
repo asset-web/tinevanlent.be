@@ -33,10 +33,14 @@ jobs:
           context: .
           load: true
           tags: ${{ env.TEST_TAG }}
-      - name: Test
+      - name: Build site and run link checkers
         run: |
           docker run -v ".:/src" --rm ${{ env.TEST_TAG }}
           ls -l _site
+      - name: Proof HTML
+        uses: anishathalye/proof-html@v2
+        with:
+          directory: _site
       - name: Push Docker images if on master branch
         if: ${{ startsWith(github.ref, 'refs/heads/master') }}
         run: |
