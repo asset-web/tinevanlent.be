@@ -87,6 +87,15 @@ docker compose build web
 docker compose run --rm web bash /src/scripts/cibuild.sh
 ```
 
+### Updating Ruby
+
+Update dockerfile and Gemfile.  Run the below to rebuild local Docker image
+and then update the Gemfile dependnecies.
+
+```bash
+docker compose run --rm --build web bundle update
+```
+
 #### Run development jekll server
 Run the below command and then visit: http://localhost:4000
 
